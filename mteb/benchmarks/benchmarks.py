@@ -1276,3 +1276,22 @@ CHEMTEB = Benchmark(
     year={2024}
 }""",
 )
+
+MTEB_TR = Benchmark(
+    name="MTEB(Turkish)",
+    tasks=get_tasks(
+        tasks=[
+            "WMT16BitextMining",
+            "TurkishMovieSentimentClassification",
+            "TurkishOffensiveLanguageClassification",
+            "TurkishProductSentimentClassification",
+            "TurkishNewsCategoryClassification",
+            "Turkish75NewsClassification",
+
+        ],
+        languages=["tur"],
+    ),
+    description="The Turkish Massive Text Embedding Benchmark (TR-MTEB) is a comprehensive benchmark for "
+                "Turkish text embeddings covering 6 tasks and 35 datasets.",
+    reference="",
+)
