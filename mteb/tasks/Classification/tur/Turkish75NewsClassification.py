@@ -32,3 +32,8 @@ class Turkish75NewsClassification(AbsTaskClassification):
         }
         """,
     )
+    def dataset_transform(self):
+        self.dataset = self.dataset["test"]
+        self.dataset = self.dataset.class_encode_column("label")
+        self.dataset = self.dataset.train_test_split(test_size=0.2, seed=self.seed, stratify_by_column="label")
+

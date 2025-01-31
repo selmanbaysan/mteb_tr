@@ -149,7 +149,10 @@ from .tam.TamilNewsClassification import *
 from .tel.TeluguAndhraJyotiNewsClassification import *
 from .tha.WisesightSentimentClassification import *
 from .tsn.TswanaNewsClassification import *
+from .tur.THYSentimentClassification import *
+from .tur.TSTimelineNewsCategoryClassification import *
 from .tur.Turkish75NewsClassification import *
+from .tur.TurkishIronyClassification import *
 from .tur.TurkishMovieSentimentClassification import *
 from .tur.TurkishNewsCategoryClassification import *
 from .tur.TurkishOffensiveLanguageClassification import *
