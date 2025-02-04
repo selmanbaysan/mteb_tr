@@ -25,4 +25,6 @@ from .pol.PolishPC import *
 from .por.Assin2RTE import *
 from .por.SickBrPC import *
 from .rus.TERRa import *
+from .tur.MnliTR import *
+from .tur.SnliTR import *
 from .zho.CMTEBPairClassification import *

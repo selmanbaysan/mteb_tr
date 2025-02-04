@@ -1281,17 +1281,22 @@ MTEB_TR = Benchmark(
     name="MTEB(Turkish)",
     tasks=get_tasks(
         tasks=[
-            "WMT16BitextMining",
-            "TurkishMovieSentimentClassification",
-            "TurkishOffensiveLanguageClassification",
-            "TurkishProductSentimentClassification",
-            "TurkishNewsCategoryClassification",
-            "Turkish75NewsClassification",
-            # "TSTimelineNewsCategoryClassification",
-            "THYSentimentClassification",
-            "TurkishIronyClassification",
-            "TurkishAbstractCorpusClustering",
-            "TurkishColumnWritingClustering",
+            #"WMT16BitextMining",
+            #"TurkishMovieSentimentClassification",
+            #"TurkishOffensiveLanguageClassification",
+            #"TurkishProductSentimentClassification",
+            #"TurkishNewsCategoryClassification",
+            #"Turkish75NewsClassification",
+            ## "TSTimelineNewsCategoryClassification",
+            #"THYSentimentClassification",
+            #"TurkishIronyClassification",
+            #"TurkishAbstractCorpusClustering",
+            #"TurkishColumnWritingClustering",
+            #"MnliTr",
+            #"SnliTr",
+            #"XNLI"
+            #"STSbTR"
+            "SquadTRRetrieval"
         ],
         languages=["tur"],
     ),

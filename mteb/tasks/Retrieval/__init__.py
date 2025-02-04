@@ -157,6 +157,7 @@ from .spa.SpanishPassageRetrievalS2S import *
 from .swe.SwednRetrieval import *
 from .swe.SweFaqRetrieval import *
 from .tur.TurHistQuad import *
+from .tur.SquadTR import *
 from .vie.VieQuADRetrieval import *
 from .zho.CMTEBRetrieval import *
 from .zho.LeCaRDv2Retrieval import *
