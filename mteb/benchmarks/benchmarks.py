@@ -1296,7 +1296,8 @@ MTEB_TR = Benchmark(
             #"SnliTr",
             #"XNLI"
             #"STSbTR"
-            "SquadTRRetrieval"
+            #"SquadTRRetrieval"
+            "TQuadRetrieval"
         ],
         languages=["tur"],
     ),

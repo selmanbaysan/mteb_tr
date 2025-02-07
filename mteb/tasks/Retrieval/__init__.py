@@ -158,6 +158,7 @@ from .swe.SwednRetrieval import *
 from .swe.SweFaqRetrieval import *
 from .tur.TurHistQuad import *
 from .tur.SquadTR import *
+from .tur.TQuad import *
 from .vie.VieQuADRetrieval import *
 from .zho.CMTEBRetrieval import *
 from .zho.LeCaRDv2Retrieval import *
