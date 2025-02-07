@@ -1,4 +1,5 @@
 from datasets import get_dataset_config_info
+from datasets import load_dataset
 import argparse
 
 def get_revision(dataset_path: str) -> str:
@@ -17,11 +18,19 @@ def get_revision(dataset_path: str) -> str:
         print(f"Error getting revision for {dataset_path}: {str(e)}")
         return None
 
+
+def read_dataset(dataset_path: str):
+    dataset = load_dataset(dataset_path)
+    print(dataset)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Get dataset revision number')
     parser.add_argument('--dataset_path', type=str, help='Path to dataset on HF Hub')
     args = parser.parse_args()
-    
+
     revision = get_revision(args.dataset_path)
     if revision:
         print(f"Latest revision for {args.dataset_path}: {revision}")
+
+    read_dataset(args.dataset_path)
