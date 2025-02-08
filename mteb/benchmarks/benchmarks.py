@@ -1287,7 +1287,7 @@ MTEB_TR = Benchmark(
             #"TurkishProductSentimentClassification",
             #"TurkishNewsCategoryClassification",
             #"Turkish75NewsClassification",
-            ## "TSTimelineNewsCategoryClassification",
+            #"TSTimelineNewsCategoryClassification",
             #"THYSentimentClassification",
             #"TurkishIronyClassification",
             #"TurkishAbstractCorpusClustering",
@@ -1296,7 +1296,7 @@ MTEB_TR = Benchmark(
             #"SnliTr",
             #"XNLI"
             #"STSbTR"
-            "SquadTRRetrieval"
+            #"SquadTRRetrieval"
             #"TQuadRetrieval"
         ],
         languages=["tur"],
