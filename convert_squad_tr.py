@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import uuid
 
+import datasets
 from datasets import load_dataset
 from huggingface_hub import create_repo, upload_file
 
@@ -21,30 +22,42 @@ def preprocess_data(example: dict) -> dict:
         "answer_text": example["context"],
     }
 
+def create_retrieval_datasets(dataset: datasets.Dataset):
+    dataset = dataset["train"]["data"]
+    corpus = []
+    queries = []
+    default = []
+    corpus_id = 0
+    for row in dataset:
+        title = row["title"]
+        for paragraph in row["paragraphs"]:
+            context = paragraph["context"]
+            corpus.append({"_id": corpus_id, "title": title, "text": context})
+            for qas in paragraph["qas"]:
+                question = qas["question"]
+                queries.append({"_id": qas["id"], "text": question})
+                default.append({"query-id": qas["id"], "corpus-id": corpus_id, "score": 1})
+            corpus_id += 1
+    return corpus, queries, default
 
-repo_name = "selmanbaysan/squad_tr_v2"
+
+
+repo_name = "selmanbaysan/squad-tr-v2"
 create_repo(repo_name, repo_type="dataset")
 
 
-raw_dset = load_dataset("boun-tabi/squad_tr")
-dset = raw_dset["validation"]
-trimmed_dataset = dset.select(range(2048))
-updated_dataset = trimmed_dataset.map(
-    preprocess_data, remove_columns=["question", "context", "answers"]
-)
-corpus_ds = updated_dataset.map(
-    lambda example: {"_id": example["corpus-id"], "text": example["answer_text"], "title": example["title"]},
-    remove_columns=["id", "query-id", "query_text", "corpus-id", "answer_text"],
-)
-default_ds = updated_dataset.map(
-    lambda example: example, remove_columns=["id", "title", "answer_text", "query_text"]
-)
-default_ds = default_ds.add_column("score", len(corpus_ds) * [1])
-queries_ds = updated_dataset.map(
-    lambda example: {"_id": example["query-id"], "text": example["query_text"]},
-    remove_columns=["id", "corpus-id", "answer_text", "query-id", "query_text", "title"],
-)
+#raw_dset = load_dataset("boun-tabi/squad_tr")
+#dset = raw_dset["validation"]
+dset = load_dataset("json", data_files="squad-tr-dev-v1.0.0.json")
+
+corpus, queries, default = create_retrieval_datasets(dset)
+print(len(corpus), len(queries), len(default))
+corpus_ds = datasets.Dataset.from_list(corpus)
+default_ds = datasets.Dataset.from_list(default)
+queries_ds = datasets.Dataset.from_list(queries)
+
 data = {"corpus": corpus_ds, "default": default_ds, "queries": queries_ds}
+
 for splits in ["default", "queries", "corpus"]:
     save_path = f"{splits}.jsonl"
     data[splits].to_json(save_path)
