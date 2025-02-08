@@ -1294,10 +1294,13 @@ MTEB_TR = Benchmark(
             #"TurkishColumnWritingClustering",
             #"MnliTr",
             #"SnliTr",
-            #"XNLI"
-            #"STSbTR"
-            #"SquadTRRetrieval"
-            #"TQuadRetrieval"
+            #"XNLI",
+            #"STSbTR",
+            #"SquadTRRetrieval",
+            #"TQuadRetrieval",
+            #"XQuADRetrieval",
+            "MSMarcoTRRetrieval"
+
         ],
         languages=["tur"],
     ),

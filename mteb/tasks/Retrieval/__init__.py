@@ -156,6 +156,7 @@ from .spa.SpanishPassageRetrievalS2P import *
 from .spa.SpanishPassageRetrievalS2S import *
 from .swe.SwednRetrieval import *
 from .swe.SweFaqRetrieval import *
+from .tur.MSMarcoTR import *
 from .tur.TurHistQuad import *
 from .tur.SquadTR import *
 from .tur.TQuad import *
