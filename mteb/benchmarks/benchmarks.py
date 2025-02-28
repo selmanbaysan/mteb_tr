@@ -1299,8 +1299,7 @@ MTEB_TR = Benchmark(
             "SquadTRRetrieval",
             "TQuadRetrieval",
             "XQuADRetrieval",
-            "MSMarcoTRRetrieval"
-            "TurHistQuadRetrieval"
+            "MSMarcoTRRetrieval",
             "NFCorpusTR",
             "ArguAnaTR",
             "CQADupstackGamingRetrievalTR",
