@@ -5,7 +5,7 @@ from sentence_transformers import SentenceTransformer
 mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
 
 # Initialize model
-model_name = "sentence-transformers/all-MiniLM-L6-v2" # or path to local model
+model_name = "sentence-transformers/LaBSE" # or path to local model
 model = SentenceTransformer(model_name)
 
 # Initialize MTEB evaluation

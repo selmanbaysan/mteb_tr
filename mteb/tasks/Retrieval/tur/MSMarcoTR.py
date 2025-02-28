@@ -48,6 +48,9 @@ class MSMarcoTRRetrieval(AbsTaskRetrieval):
         biburl       = {https://dblp.org/rec/journals/corr/NguyenRSGTMD16.bib},
         bibsource    = {dblp computer science bibliography, https://dblp.org}
         """,
+        prompt={
+            "query": "Bir web arama sorgusu verildiğinde, sorguyu yanıtlayan ilgili metinleri getir"
+        },
     )
 
     def load_data(self, **kwargs) -> None:
@@ -83,9 +86,7 @@ class MSMarcoTRRetrieval(AbsTaskRetrieval):
             queries_ids = set(ds["query-id"])
 
             corpus_ds = corpus_ds.filter(lambda x: x["_id"] in corpus_ids)
-            print(corpus_ds)
             queries_ds = queries_ds.filter(lambda x: x["_id"] in queries_ids)
-            print(queries_ds)
 
             self.queries[split] = {}
             self.relevant_docs[split] = {}

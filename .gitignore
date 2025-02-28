@@ -148,3 +148,6 @@ uv.lock
 
 # model loading tests
 model_names.txt
+
+# turkish fasttext model
+cc.tr.300.bin
