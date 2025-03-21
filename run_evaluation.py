@@ -19,9 +19,6 @@ def evaluate_model(model_name):
 
 
 models = [
-    'selmanbaysan/bert-base-turkish-cased-mean-nli-stsb-tr_contrastive_loss_training',
-    'selmanbaysan/bert-base-turkish-cased_contrastive_loss_training',
-    'intfloat/multilingual-e5-large',
     'Alibaba-NLP/gte-multilingual-base',
 ]
 

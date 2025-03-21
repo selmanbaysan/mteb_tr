@@ -30,8 +30,10 @@ class OpenAIEvaluator:
             sentence = sentence.replace("\n", " ")
             vec = client.embeddings.create(input = [sentence], model=self.model).data[0].embedding
             embeddings.append(vec)
+        
+        print(len(embeddings))
 
-        return np.array(embeddings, dtype=np.float32)
+        return np.array(embeddings)
 
 def main():
     
