@@ -16,6 +16,8 @@ logger = logging.getLogger(__name__)
 MODEL_NAME = str
 REVISION = str
 
+#suppressing the logging of git clone
+logging.getLogger("git").setLevel(logging.WARNING)
 
 def download_of_results(
     results_repo: str, cache_directory: Path | None = None, download_latest: bool = True
@@ -145,6 +147,10 @@ def load_results(
             elif models_to_keep is not None and models_to_keep[model_name] is not None:
                 if models_to_keep[model_name] != revision:
                     continue
+                
+            # Check if revision path ends with "no_model_name_available"
+            if revision_path.name == "no_model_name_available":
+                revision_path = revision_path / "no_revision_available"
 
             task_json_files = [
                 f for f in revision_path.glob("*.json") if "model_meta.json" != f.name
