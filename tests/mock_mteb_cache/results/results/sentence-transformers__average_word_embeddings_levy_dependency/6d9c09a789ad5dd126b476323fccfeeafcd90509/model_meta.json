@@ -1,1 +1,3 @@
-{"name": "sentence-transformers/average_word_embeddings_levy_dependency", "revision": "6d9c09a789ad5dd126b476323fccfeeafcd90509", "release_date": null, "languages": [], "n_parameters": null, "memory_usage": null, "max_tokens": null, "embed_dim": null, "license": null, "open_source": null, "similarity_fn_name": null, "framework": ["Sentence Transformers"], "loader": null}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75d01a053b05a1b6cb1daaeae284d4c00bf0bd43bfa9409597777264a496531f
+size 373

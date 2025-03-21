@@ -1,11 +1,3 @@
-{
-    "test": {
-        "number_of_characters": 1612.5486310130989,
-        "num_samples": 3956,
-        "num_queries": 323,
-        "num_documents": 3633,
-        "average_document_length": 0.43787060972495073,
-        "average_query_length": 0.06738299034784193,
-        "average_relevant_docs_per_query": 38.18575851393189
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e10a7bfb8481c8e9488ea8963b7281fa5f5c7b997a67916b6d7e13607662a0bc
+size 333

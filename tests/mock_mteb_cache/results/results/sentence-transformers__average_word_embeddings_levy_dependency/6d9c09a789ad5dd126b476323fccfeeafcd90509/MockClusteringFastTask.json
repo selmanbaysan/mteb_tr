@@ -1,34 +1,3 @@
-{
-  "dataset_revision": "NA",
-  "evaluation_time": 1.1901772022247314,
-  "kg_co2_emissions": null,
-  "mteb_version": "1.12.75",
-  "scores": {
-    "test": [
-      {
-        "hf_subset": "default",
-        "languages": [
-          "eng-Latn"
-        ],
-        "main_score": 0.0,
-        "v_measure": 0.0,
-        "v_measure_std": 0.0,
-        "v_measures": {
-          "Level 0": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        }
-      }
-    ]
-  },
-  "task_name": "MockClusteringFastTask"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c8268d16f190789159bb7059eea93e32840106255d5a73492bdc67d85592a23
+size 632

@@ -1,15 +1,3 @@
-{
-    "test": {
-        "num_samples": 500,
-        "number_of_characters": 44361,
-        "unique_pairs": 500,
-        "min_sentence1_length": 1,
-        "average_sentence1_length": 49.834,
-        "max_sentence1_length": 555,
-        "unique_sentence1": 497,
-        "min_sentence2_length": 5,
-        "average_sentence2_length": 38.888,
-        "max_sentence2_length": 453,
-        "unique_sentence2": 491
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d8d19c6d2230f4f7c58594cf267e879eaf106b2dbb7d524bc013daa0fc25dc0
+size 416

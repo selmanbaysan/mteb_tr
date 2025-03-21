@@ -1,14 +1,20 @@
 from mteb import MTEB
 import mteb
-from fasttext import load_model
+from gensim.models import KeyedVectors
+from gensim.scripts.glove2word2vec import glove2word2vec 
+
 import numpy as np
 from typing import List, Dict
 from mteb.encoder_interface import PromptType
 
 
-class FastTextEvaluator:
-    def __init__(self, model_path: str):
-        self.model = load_model(model_path)
+class GloveEvaluator:
+    def __init__(self, glove_path: str):
+        self.model = self.load_glove_model(glove_path)
+        
+    def load_glove_model(self, glove_path: str):
+        model = KeyedVectors.load_word2vec_format(glove_path, encoding='utf8')
+        return model
         
     def encode(
         self,
@@ -17,7 +23,7 @@ class FastTextEvaluator:
         prompt_type: PromptType | None = None,
         **kwargs
     ) -> np.ndarray:
-        """Encodes the given sentences using FastText.
+        """Encodes the given sentences using GloVe.
         
         Args:
             sentences: The sentences to encode.
@@ -31,19 +37,25 @@ class FastTextEvaluator:
         embeddings = []
         for sentence in sentences:
             sentence = sentence.replace("\n", " ")
-            vec = self.model.get_sentence_vector(sentence)
+            words = [self.model[word] for word in sentence.split() if word in self.model]
+            if words:
+                vec = np.mean(words, axis=0)
+            else:
+                vec = np.zeros(self.model.vector_size)
+
             embeddings.append(vec)
-        return np.array(embeddings)
+
+        return np.array(embeddings, dtype=np.float64)
 
 def main():
-    # Initialize FastText model
-    model_path = "/Users/selmanbaysan/Documents/models/cc.tr.300.bin"  # Replace with your model path
-    model = FastTextEvaluator(model_path)
+    
+    word2vec_path = "/Users/selmanbaysan/Documents/models/word2vec.txt"
+    model = GloveEvaluator(word2vec_path)
     
     # Initialize MTEB with specific tasks
     mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
     evaluation = MTEB(tasks=mteb_tr)
     # Run evaluation
-    results = evaluation.run(model, output_folder="results/fasttext")
+    results = evaluation.run(model, output_folder="results/glove")
 
 main()

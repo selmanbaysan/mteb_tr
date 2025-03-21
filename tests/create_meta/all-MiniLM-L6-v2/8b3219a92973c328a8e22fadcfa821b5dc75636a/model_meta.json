@@ -1,1 +1,3 @@
-{"name": "all-MiniLM-L6-v2", "revision": "8b3219a92973c328a8e22fadcfa821b5dc75636a", "release_date": null, "languages": [], "n_parameters": null, "memory_usage": null, "max_tokens": null, "embed_dim": null, "license": null, "open_source": null, "framework": ["Sentence Transformers"], "loader": null}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d1492b64745308f7d449694142a80739c6b4e02a220b533fd56a4975203d3f6
+size 300

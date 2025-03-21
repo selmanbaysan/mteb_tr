@@ -34,5 +34,8 @@ class TurkishColumnWritingClustering(AbsTaskClustering):
           volume   = {LNCS Volume 3999}
         }""",
     )
+    def dataset_transform(self):
+        ds = clustering_downsample(self.dataset, self.seed, max_samples_in_cluster=64)
+        self.dataset = ds
 
 

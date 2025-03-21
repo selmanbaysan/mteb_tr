@@ -1,14 +1,15 @@
 from mteb import MTEB
 import mteb
-from fasttext import load_model
+from openai import OpenAI
 import numpy as np
-from typing import List, Dict
+from typing import List
 from mteb.encoder_interface import PromptType
 
+client = OpenAI()
 
-class FastTextEvaluator:
+class OpenAIEvaluator:
     def __init__(self, model_path: str):
-        self.model = load_model(model_path)
+        self.model = model_path
         
     def encode(
         self,
@@ -17,33 +18,31 @@ class FastTextEvaluator:
         prompt_type: PromptType | None = None,
         **kwargs
     ) -> np.ndarray:
-        """Encodes the given sentences using FastText.
+        """Encodes the given sentences using OpenAI API.
         
         Args:
             sentences: The sentences to encode.
-            task_name: The name of the task.
-            prompt_type: The prompt type to use.
-            **kwargs: Additional arguments to pass to the encoder.
-            
         Returns:
             The encoded sentences.
         """
         embeddings = []
         for sentence in sentences:
             sentence = sentence.replace("\n", " ")
-            vec = self.model.get_sentence_vector(sentence)
+            vec = client.embeddings.create(input = [sentence], model=self.model).data[0].embedding
             embeddings.append(vec)
-        return np.array(embeddings)
+
+        return np.array(embeddings, dtype=np.float32)
 
 def main():
-    # Initialize FastText model
-    model_path = "/Users/selmanbaysan/Documents/models/cc.tr.300.bin"  # Replace with your model path
-    model = FastTextEvaluator(model_path)
     
     # Initialize MTEB with specific tasks
     mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
     evaluation = MTEB(tasks=mteb_tr)
+
+    # Initialize OpenAI model
+    model_path = "text-embedding-3-small"
+    model = OpenAIEvaluator(model_path)
     # Run evaluation
-    results = evaluation.run(model, output_folder="results/fasttext")
+    results = evaluation.run(model, output_folder=f"results/{model_path}")
 
 main()

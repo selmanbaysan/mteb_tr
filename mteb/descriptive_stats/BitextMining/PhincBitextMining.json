@@ -1,30 +1,3 @@
-{
-    "train": {
-        "num_samples": 13738,
-        "number_of_characters": 2069457,
-        "unique_pairs": 13737,
-        "min_sentence1_length": 1,
-        "average_sentence1_length": 74.02300189256079,
-        "max_sentence1_length": 278,
-        "unique_sentence1": 13515,
-        "min_sentence2_length": 3,
-        "average_sentence2_length": 76.61442713640996,
-        "max_sentence2_length": 274,
-        "unique_sentence2": 13736,
-        "hf_subset_descriptive_stats": {
-            "eng-eng_hin": {
-                "num_samples": 13738,
-                "number_of_characters": 2069457,
-                "unique_pairs": 13737,
-                "min_sentence1_length": 1,
-                "average_sentence1_length": 74.02300189256079,
-                "max_sentence1_length": 278,
-                "unique_sentence1": 13515,
-                "min_sentence2_length": 3,
-                "average_sentence2_length": 76.61442713640996,
-                "max_sentence2_length": 274,
-                "unique_sentence2": 13736
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:12d3c1cfb65cc6ca8bf25a58b17590dbd75a452857eb58d5010404ebe36e19d0
+size 1057
