@@ -19,7 +19,7 @@ def evaluate_model(model_name):
 
 
 models = [
-    'Alibaba-NLP/gte-multilingual-base',
+    'selmanbaysan/multilingual-e5-base_fine_tuned',
 ]
 
 for model in models:

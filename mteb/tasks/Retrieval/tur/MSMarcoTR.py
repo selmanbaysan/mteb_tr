@@ -66,8 +66,8 @@ class MSMarcoTRRetrieval(AbsTaskRetrieval):
 
         self.dataset = datasets.load_dataset(**self.metadata_dict["dataset"])
         
-        corpus_ds = datasets.load_dataset(self.metadata_dict["dataset"]["path"], "corpus", split="test")
-        queries_ds = datasets.load_dataset(self.metadata_dict["dataset"]["path"], "queries", split="test")
+        corpus_ds = datasets.load_dataset(self.metadata_dict["dataset"]["path"], "corpus", split="corpus")
+        queries_ds = datasets.load_dataset(self.metadata_dict["dataset"]["path"], "queries", split="queries")
 
         self.corpus = {}
         self.relevant_docs = {}
@@ -85,28 +85,24 @@ class MSMarcoTRRetrieval(AbsTaskRetrieval):
             corpus_ids = set(ds["corpus-id"])
             queries_ids = set(ds["query-id"])
 
-            corpus_ds = corpus_ds.filter(lambda x: x["_id"] in corpus_ids)
-            queries_ds = queries_ds.filter(lambda x: x["_id"] in queries_ids)
-
+            corpus_ds = corpus_ds.filter(lambda doc: str(doc["_id"]) in corpus_ids)
+            queries_ds = queries_ds.filter(lambda query: str(query["_id"]) in queries_ids)
+            
             self.queries[split] = {}
             self.relevant_docs[split] = {}
             self.corpus[split] = {}
 
             for doc in corpus_ds:
-                self.corpus[split][doc["_id"]] = {"title": "", "text": doc["text"]}
+                self.corpus[split][str(doc["_id"])] = {"title": "", "text": doc["text"]}
                 
             for query in queries_ds:
-                self.queries[split][query["_id"]] = query["text"]
+                self.queries[split][str(query["_id"])] = query["text"]
             
             for rel in ds:
                 query_id = rel["query-id"]
                 doc_id = rel["corpus-id"]
                 self.relevant_docs[split][query_id] = {}
                 self.relevant_docs[split][query_id][doc_id] = 1
-            
+        
         self.data_loaded = True
-
-            
-
-
             

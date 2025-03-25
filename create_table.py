@@ -128,14 +128,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--results_repo",
         type=str,
-        default="https://github.com/embeddings-benchmark/results",
+        default="https://github.com/selmanbaysan/mteb_tr_results",
         help="Path to results repository. Default is the official MTEB results repo.",
     )
 
     parser.add_argument(
         "--save-path",
         type=str,
-        default=None,
+        default="benchmark_tables",
         help="Path to save the leaderboard as a CSV file",
     )
 
