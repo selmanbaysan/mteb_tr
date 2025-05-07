@@ -20,7 +20,8 @@ def evaluate_model(model_name):
 
 models = [
     #'selmanbaysan/multilingual-e5-base_fine_tuned',
-    "dbmdz/bert-base-turkish-uncased",
+    #"dbmdz/bert-base-turkish-uncased",
+    "selmanbaysan/bert-base-turkish-cased_large_scale_contrastive_learning"
 ]
 
 for model in models:

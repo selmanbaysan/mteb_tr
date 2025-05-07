@@ -113,7 +113,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--benchmark",
         type=str,
-        required=True,
+        default="MTEB(Turkish)",
         help=f"Which benchmark to load. Available: {get_available_benchmarks()}",
     )
 
