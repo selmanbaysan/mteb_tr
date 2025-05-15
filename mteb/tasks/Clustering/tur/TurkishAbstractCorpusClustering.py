@@ -14,8 +14,8 @@ class TurkishAbstractCorpusClustering(AbsTaskClustering):
                     " the lexicon variety by different diciplines.",
         reference="https://www.kaggle.com/Cornell-University/arxiv",
         dataset={
-            "path": "mteb/arxiv-clustering-p2p",
-            "revision": "a122ad7f3f0291bf49cc6f4d32aa80929df69d5d",
+            "path": "selmanbaysan/ts_abstract_corpus_p2p",
+            "revision": "main",
         },
         type="Clustering",
         category="p2p",
@@ -40,6 +40,6 @@ class TurkishAbstractCorpusClustering(AbsTaskClustering):
     )
 
   def dataset_transform(self):
-    ds = clustering_downsample(self.dataset, self.seed, max_samples_in_cluster=len(self.dataset["test"]["sentences"][0]) // 10)
-    self.dataset = ds
+      ds = clustering_downsample(self.dataset, self.seed, max_samples_in_cluster=len(self.dataset["test"]["sentences"][0]) // 10)
+      self.dataset = ds
 

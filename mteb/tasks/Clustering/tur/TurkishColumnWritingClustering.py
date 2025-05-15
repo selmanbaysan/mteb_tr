@@ -6,15 +6,13 @@ from mteb.abstasks.TaskMetadata import TaskMetadata
 
 
 class TurkishColumnWritingClustering(AbsTaskClustering):
-    superseded_by = "TurkishColumnWritingClustering"
-
     metadata = TaskMetadata(
         name="TurkishColumnWritingClustering",
         description="Column Writings dataset contains 630 Turkish column writings from 18 different authors,"
                     " each has 35 coloumn writings. Dataset is genereated by Kemik Natural Language Processing Group.",
         reference="https://hackmd.io/@data-tdd/HJPOie2Tc",
         dataset={
-            "path": "selmanbaysan/630koseyazisi",
+            "path": "selmanbaysan/630koseyazisi_p2p",
             "revision": "main",
         },
         type="Clustering",
@@ -34,8 +32,7 @@ class TurkishColumnWritingClustering(AbsTaskClustering):
           volume   = {LNCS Volume 3999}
         }""",
     )
+    
     def dataset_transform(self):
         ds = clustering_downsample(self.dataset, self.seed, max_samples_in_cluster=len(self.dataset["test"]["sentences"][0]) // 10)
         self.dataset = ds
-
-
