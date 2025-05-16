@@ -52,7 +52,7 @@ plt.savefig("benchmark_tables/overall_performance.png", bbox_inches="tight")
 # 📊 Visualization 3: Task-Specific Performance Comparison
 plt.figure(figsize=(14, 7))
 df_melted = df.melt(id_vars=["Model"], value_vars=numeric_columns, var_name="Task", value_name="Score")
-sns.boxplot(x="Task", y="Score", data=df_melted, palette="Set2")
+sns.boxplot(x="Task", y="Score", data=df_melted, palette="Set2", hue="Task", legend=False)
 plt.xticks(rotation=30)
 plt.title("Performance Distribution Across Tasks")
 plt.xlabel("Task")

@@ -39,7 +39,7 @@ class TurkishAbstractCorpusClustering(AbsTaskClustering):
         }""",
     )
 
-  def dataset_transform(self):
+  """def dataset_transform(self):
       ds = clustering_downsample(self.dataset, self.seed, max_samples_in_cluster=len(self.dataset["test"]["sentences"][0]) // 10)
-      self.dataset = ds
+      self.dataset = ds"""
 
