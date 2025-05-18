@@ -1,0 +1,17 @@
+Rank (Borda),Model,Zero-shot,Number of Parameters,Embedding Dimensions,Max Tokens,Mean (Task),Mean (TaskType),Classification,Clustering,Pair Classification,Retrieval,STS
+1,[multilingual-e5-large](https://huggingface.co/intfloat/multilingual-e5-large),✅,560M,1024,514,65.52,67.8,71.77,60.42,65.01,60.62,81.18
+2,[multilingual-e5-large-instruct](https://huggingface.co/intfloat/multilingual-e5-large-instruct),✅,560M,1024,514,64.6,67.53,73.7,61.78,63.74,57.21,81.23
+3,[gte-multilingual-base](https://huggingface.co/Alibaba-NLP/gte-multilingual-base),✅,305M,1024,8192,63.15,66.76,67.79,60.39,67.41,57.51,80.68
+4,[multilingual-e5-base](https://huggingface.co/intfloat/multilingual-e5-base),✅,278M,768,514,62.89,65.46,68.2,60.25,62.2,58.29,78.37
+5,no_model_name_available,⚠️,Unknown,Unknown,Unknown,60.72,63.85,70.68,63.45,57.65,52.54,74.93
+6,[paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2),✅,278M,768,512,60.34,66.05,69.06,57.52,72.22,49.27,82.18
+7,[multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small),✅,118M,384,512,61.14,63.97,65.64,59.14,62.34,56.53,76.18
+8,[paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2),✅,118M,768,512,57.55,63.39,65.76,56.64,69.56,46.57,78.41
+9,[LaBSE](https://huggingface.co/sentence-transformers/LaBSE),⚠️,471M,768,512,55.92,60.01,65.6,58.4,57.83,46.47,71.75
+10,bert-base-turkish-uncased,⚠️,Unknown,Unknown,Unknown,51.24,55.07,70.12,60.77,52.92,34.82,56.74
+11,fasttext,⚠️,Unknown,Unknown,Unknown,48.63,52.11,63.35,59.74,52.7,34.67,50.08
+12,text-embedding-3-small,⚠️,Unknown,Unknown,Unknown,,,69.51,62.08,,,
+13,glove,⚠️,Unknown,Unknown,Unknown,43.01,47.74,62.54,58.41,49.48,24.14,44.12
+14,[all-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L12-v2),✅,33M,384,256,39.87,44.55,50.63,39.95,51.79,27.6,52.78
+15,[all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2),✅,22M,384,256,38.27,43.07,52.46,40.57,50.52,23.25,48.55
+16,[all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2),✅,109M,768,384,38.92,44.66,54.43,46.63,49.79,22.26,50.21

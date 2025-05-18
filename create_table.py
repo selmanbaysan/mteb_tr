@@ -89,10 +89,10 @@ def load_leaderboard(
         os.makedirs(save_path, exist_ok=True)  # Ensure directory exists
 
         summary_file = os.path.join(
-            save_path, f"{benchmark_name.replace(' ', '_')}_summary.csv"
+            save_path, f"{benchmark_name.replace(' ', '_')}_summary_without_bitext_mining.csv"
         )
         per_task_file = os.path.join(
-            save_path, f"{benchmark_name.replace(' ', '_')}_per_task.csv"
+            save_path, f"{benchmark_name.replace(' ', '_')}_per_task_without_bitext_mining.csv"
         )
 
         summary_df.to_csv(summary_file, index=False)
