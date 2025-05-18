@@ -53,8 +53,8 @@ def main():
     model = GloveEvaluator(word2vec_path)
     
     # Initialize MTEB with specific tasks
-    #mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
-    mteb_tr = mteb.get_tasks(tasks=["TurkishColumnWritingClustering", "TurkishAbstractCorpusClustering"])
+    mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
+    #mteb_tr = mteb.get_tasks(tasks=["TurkishColumnWritingClustering", "TurkishAbstractCorpusClustering"])
     evaluation = MTEB(tasks=mteb_tr)
     # Run evaluation
     results = evaluation.run(model, output_folder="results/glove")
