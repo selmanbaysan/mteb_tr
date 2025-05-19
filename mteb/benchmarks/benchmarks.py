@@ -1281,7 +1281,7 @@ MTEB_TR = Benchmark(
     name="MTEB(Turkish)",
     tasks=get_tasks(
         tasks=[
-            #"WMT16BitextMining",
+            "WMT16BitextMining",
             "TurkishMovieSentimentClassification",
             "TurkishOffensiveLanguageClassification",
             "TurkishProductSentimentClassification",

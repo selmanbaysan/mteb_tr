@@ -31,15 +31,13 @@ class OpenAIEvaluator:
             vec = client.embeddings.create(input = [sentence], model=self.model).data[0].embedding
             embeddings.append(vec)
         
-        print(len(embeddings))
-
         return np.array(embeddings)
 
 def main():
     
     # Initialize MTEB with specific tasks
-    mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
-    # mteb_tr = mteb.get_tasks(tasks=["TurkishColumnWritingClustering", "TurkishAbstractCorpusClustering"])
+    #mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
+    mteb_tr = mteb.get_tasks(tasks=["TQuadRetrieval"])
     evaluation = MTEB(tasks=mteb_tr)
 
     # Initialize OpenAI model
