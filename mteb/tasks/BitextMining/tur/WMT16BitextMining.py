@@ -8,7 +8,7 @@ class WMT16BitextMining(AbsTaskBitextMining):
     metadata = TaskMetadata(
         name="WMT16BitextMining",
         dataset={
-            "path": "selmanbaysan/wmt16_en_tr",
+            "path": "trmteb/wmt16_en_tr",
             "revision": "main",
             "trust_remote_code": True,
         },

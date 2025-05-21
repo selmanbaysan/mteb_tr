@@ -10,7 +10,7 @@ class NFCorpusTR(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="NFCorpusTR",
         dataset={
-            "path": "selmanbaysan/nfcorpus-tr",
+            "path": "trmteb/nfcorpus-tr",
             "revision": "main",
         },
         description="Turkish machine translated version of the NFCorpus: A Full-Text Learning to Rank Dataset for Medical Information Retrieval",

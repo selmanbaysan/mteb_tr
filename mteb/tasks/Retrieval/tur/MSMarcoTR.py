@@ -10,7 +10,7 @@ class MSMarcoTRRetrieval(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="MSMarcoTRRetrieval",
         dataset={
-            "path": "selmanbaysan/msmarco-tr",
+            "path": "trmteb/msmarco-tr",
             "revision": "main",
         },
         description="Turkish version of MSMARCO Passage Ranking dataset. This dataset is a machine translated version of the original MSMARCO dataset into Turkish.",

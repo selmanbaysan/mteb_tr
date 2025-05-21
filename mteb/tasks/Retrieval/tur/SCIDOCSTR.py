@@ -10,7 +10,7 @@ class SCIDOCSTR(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="SCIDOCSTR",
         dataset={
-            "path": "selmanbaysan/scidocs-tr",
+            "path": "trmteb/scidocs-tr",
             "revision": "main",
         },
         description=(

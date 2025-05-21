@@ -15,7 +15,7 @@ class FiQA2018TR(AbsTaskRetrieval):
         description="Turkish machine translated version of the FiQA 2018. Financial Opinion Mining and Question Answering",
         reference="https://sites.google.com/view/fiqa/",
         dataset={
-            "path": "selmanbaysan/fiqa-tr",
+            "path": "trmteb/fiqa-tr",
             "revision": "main",
         },
         type="Retrieval",

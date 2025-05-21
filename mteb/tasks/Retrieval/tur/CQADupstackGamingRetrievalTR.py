@@ -11,7 +11,7 @@ class CQADupstackGamingRetrievalTR(AbsTaskRetrieval):
         description="Turkish machine translated version of the CQADupStack: A Benchmark Data Set for Community Question-Answering Research",
         reference="http://nlp.cis.unimelb.edu.au/resources/cqadupstack/",
         dataset={
-            "path": "selmanbaysan/cqadupstack-gaming-tr",
+            "path": "trmteb/cqadupstack-gaming-tr",
             "revision": "main",
         },
         type="Retrieval",

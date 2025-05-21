@@ -9,7 +9,7 @@ class STSbTR(AbsTaskSTS):
     metadata = TaskMetadata(
         name="STSbTR",
         dataset={
-            "path": "selmanbaysan/stsb-tr",
+            "path": "trmteb/stsb-tr",
             "revision": "main",
         },
         description="Semantic Textual Similarity (STS) benchmark Turkish (STSb-TR) dataset is the machine translated "

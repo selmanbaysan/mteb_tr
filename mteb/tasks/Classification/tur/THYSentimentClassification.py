@@ -12,7 +12,7 @@ class THYSentimentClassification(AbsTaskClassification):
                     "polarity and tags. The tags are based on the information presented in the tweet.",
         reference="https://hackmd.io/@data-tdd/B1SyZQbyq",
         dataset={
-            "path": "selmanbaysan/thy_sa",
+            "path": "trmteb/thy_sa",
             "revision": "main",
         },
         type="Classification",

@@ -12,7 +12,7 @@ class TurkishColumnWritingClustering(AbsTaskClustering):
                     " each has 35 coloumn writings. Dataset is genereated by Kemik Natural Language Processing Group.",
         reference="https://hackmd.io/@data-tdd/HJPOie2Tc",
         dataset={
-            "path": "selmanbaysan/630koseyazisi_p2p",
+            "path": "trmteb/630koseyazisi_p2p",
             "revision": "main",
         },
         type="Clustering",

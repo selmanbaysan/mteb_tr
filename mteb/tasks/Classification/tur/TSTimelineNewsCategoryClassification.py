@@ -12,7 +12,7 @@ class TSTimelineNewsCategoryClassification(AbsTaskClassification):
                     "The news is segmented into sentences and labelled with 12 categories.",
         reference="https://hackmd.io/@data-tdd/BkXpTWxDK",
         dataset={
-            "path": "selmanbaysan/ts_timeline_news_category",
+            "path": "trmteb/ts_timeline_news_category",
             "revision": "main",
         },
         type="Classification",

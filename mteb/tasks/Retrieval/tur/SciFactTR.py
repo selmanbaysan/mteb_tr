@@ -10,7 +10,7 @@ class SciFactTR(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="SciFactTR",
         dataset={
-            "path": "selmanbaysan/scifact-tr",
+            "path": "trmteb/scifact-tr",
             "revision": "main",
         },
         description="Turkish machine translated version of the SciFact. SciFact verifies scientific claims using evidence from the research literature containing scientific paper abstracts.",

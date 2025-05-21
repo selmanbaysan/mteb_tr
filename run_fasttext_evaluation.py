@@ -37,12 +37,12 @@ class FastTextEvaluator:
 
 def main():
     # Initialize FastText model
-    model_path = "/Users/selmanbaysan/Documents/models/cc.tr.300.bin"  # Replace with your model path
+    model_path = "/models/cc.tr.300.bin"  # Turkish FastText model
     model = FastTextEvaluator(model_path)
     
     # Initialize MTEB with specific tasks
     mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
-    #mteb_tr = mteb.get_tasks(tasks=["TurkishColumnWritingClustering", "TurkishAbstractCorpusClustering"])
+    
     evaluation = MTEB(tasks=mteb_tr)
     # Run evaluation
     results = evaluation.run(model, output_folder="results/fasttext")

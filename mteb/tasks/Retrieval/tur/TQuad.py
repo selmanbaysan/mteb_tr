@@ -10,7 +10,7 @@ class TQuadRetrieval(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="TQuadRetrieval",
         dataset={
-            "path": "selmanbaysan/tquad",
+            "path": "trmteb/tquad",
             "revision": "main",
         },
         description="This dataset is the Turkish Question & Answer dataset on Turkish & Islamic Science History within"

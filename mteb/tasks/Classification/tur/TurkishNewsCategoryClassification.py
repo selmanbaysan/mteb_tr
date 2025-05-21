@@ -12,7 +12,7 @@ class TurkishNewsCategoryClassification(AbsTaskClassification):
                     " from Turkish news resources",
         reference="http://www.kemik.yildiz.edu.tr/veri_kumelerimiz.html",
         dataset={
-            "path": "selmanbaysan/news-cat",
+            "path": "trmteb/news-cat",
             "revision": "main",
         },
         type="Classification",

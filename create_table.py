@@ -128,7 +128,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--results_repo",
         type=str,
-        default="https://github.com/selmanbaysan/mteb_tr_results",
+        default="https://github.com/ANONYMUS_USER/mteb_tr_results", # An
         help="Path to results repository. Default is the official MTEB results repo.",
     )
 

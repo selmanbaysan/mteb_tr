@@ -10,7 +10,7 @@ class SquadTRRetrieval(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="SquadTRRetrieval",
         dataset={
-            "path": "selmanbaysan/squad-tr",
+            "path": "trmteb/squad-tr",
             "revision": "main",
         },
         description="SQuAD-TR is a machine translated version of the original SQuAD2.0 dataset into Turkish, using Amazon Translate.",

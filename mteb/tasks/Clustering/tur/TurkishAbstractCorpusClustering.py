@@ -14,7 +14,7 @@ class TurkishAbstractCorpusClustering(AbsTaskClustering):
                     " the lexicon variety by different diciplines.",
         reference="https://www.kaggle.com/Cornell-University/arxiv",
         dataset={
-            "path": "selmanbaysan/ts_abstract_corpus_p2p",
+            "path": "trmteb/ts_abstract_corpus_p2p",
             "revision": "main",
         },
         type="Clustering",

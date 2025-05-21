@@ -12,7 +12,7 @@ class QuoraRetrievalTR(AbsTaskRetrieval):
     metadata = TaskMetadata(
         name="QuoraRetrievalTR",
         dataset={
-            "path": "selmanbaysan/quora-tr",
+            "path": "trmteb/quora-tr",
             "revision": "main",
         },
         description=(

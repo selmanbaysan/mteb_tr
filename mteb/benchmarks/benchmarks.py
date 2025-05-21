@@ -1311,6 +1311,6 @@ MTEB_TR = Benchmark(
         languages=["tur"],
     ),
     description="The Turkish Massive Text Embedding Benchmark (TR-MTEB) is a comprehensive benchmark for "
-                "Turkish text embeddings covering 6 tasks and 35 datasets.",
+                "Turkish text embeddings covering 6 tasks and 26 datasets.",
     reference="",
 )

@@ -9,7 +9,7 @@ class MnliTr(AbsTaskPairClassification):
     metadata = TaskMetadata(
         name="MnliTr",
         dataset={
-            "path": "selmanbaysan/multinli_tr",
+            "path": "trmteb/multinli_tr",
             "revision": "main",
         },
         description="Textual Entailment Recognition for Turkish. This task requires to recognize, given two text fragments, "

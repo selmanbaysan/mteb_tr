@@ -10,7 +10,7 @@ class TurkishIronyClassification(AbsTaskClassification):
         description="Extended Turkish Social Media Dataset for Irony Detection, extended over Turkish Irony Dataset",
         reference="https://github.com/teghub/IronyTR",
         dataset={
-            "path": "selmanbaysan/irony-tr",
+            "path": "trmteb/irony-tr",
             "revision": "main",
         },
         type="Classification",

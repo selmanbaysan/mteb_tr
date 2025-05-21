@@ -1,3 +1,105 @@
+# MTEB-TR: Turkish Text Embedding Benchmark
+
+MTEB-TR is a specialized version of the Massive Text Embedding Benchmark (MTEB) focused on Turkish language tasks. This benchmark provides a comprehensive evaluation framework for Turkish text embedding models across various tasks.
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/this_repo_name/mteb-tr.git
+cd mteb-tr
+```
+
+2. Create and activate a virtual environment (recommended):
+```bash
+python -m venv env
+source env/bin/activate  # On Windows, use: env\Scripts\activate
+```
+
+3. Install the package in development mode:
+```bash
+pip install -e .
+```
+
+## Usage
+
+### Using the CLI Tool
+
+The easiest way to run evaluations is using the provided CLI tool:
+
+```bash
+# Basic usage with default output folder (results/)
+./mteb_tr_cli.py "model_name"
+
+# Specify custom output folder
+./mteb_tr_cli.py "model_name" --output-folder "path/to/output"
+
+# Example with a specific model
+./mteb_tr_cli.py "sentence-transformers/LaBSE"
+```
+
+### Using Python Code
+
+You can also run evaluations directly in your Python code:
+
+```python
+import mteb
+from mteb import MTEB
+from sentence_transformers import SentenceTransformer
+
+# Get the Turkish benchmark
+mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
+
+# Initialize your model
+model = SentenceTransformer("model_name", trust_remote_code=True)
+
+# Initialize MTEB evaluation
+evaluation = MTEB(tasks=mteb_tr)
+
+# Run evaluation
+results = evaluation.run(model, output_folder="results")
+```
+
+## Available Tasks
+
+MTEB-TR includes various tasks specifically curated for Turkish language evaluation:
+
+- Classification tasks
+- Clustering tasks
+- Pair Classification tasks
+- Reranking tasks
+- Retrieval tasks
+- Semantic Textual Similarity (STS) tasks
+
+## Supported Models
+
+The benchmark supports any model that can be loaded through the `sentence-transformers` library. Some example models that work well with Turkish text:
+
+- `sentence-transformers/LaBSE`
+- `dbmdz/bert-base-turkish-uncased`
+- `dbmdz/bert-base-turkish-cased`
+- And other multilingual models that support Turkish
+
+## Output
+
+The evaluation results will be saved in the specified output folder (default: `results/`). The results include:
+
+- Detailed metrics for each task
+- Aggregated scores
+- Performance comparisons
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the same license as the original MTEB project.
+
+## Acknowledgments
+
+This project is based on the [Massive Text Embedding Benchmark (MTEB)](https://github.com/embeddings-benchmark/mteb) and has been adapted specifically for Turkish language tasks.
+
 <h1 align="center">Massive Text Embedding Benchmark</h1>
 
 <p align="center">
@@ -474,15 +576,15 @@ evaluation.run(model, ...)
 
 | Documentation                  |                        |
 | ------------------------------ | ---------------------- |
-| 📋 [Tasks] | Overview of available tasks |
+| 📋 [Tasks] | Overview of available tasks |
 | 📐 [Benchmarks] | Overview of available benchmarks |
 | 📈 [Leaderboard] | The interactive leaderboard of the benchmark |
 | 🤖 [Adding a model] | Information related to how to submit a model to the leaderboard |
 | 👩‍🔬 [Reproducible workflows] | Information related to how to reproduce and create reproducible workflows with MTEB |
-| 👩‍💻 [Adding a dataset] | How to add a new task/dataset to MTEB | 
-| 👩‍💻 [Adding a leaderboard tab] | How to add a new leaderboard tab to MTEB | 
+| 👩‍💻 [Adding a dataset] | How to add a new task/dataset to MTEB |
+| 👩‍💻 [Adding a leaderboard tab] | How to add a new leaderboard tab to MTEB |
 | 🤝 [Contributing] | How to contribute to MTEB and set it up for development |
-| 🌐 [MMTEB] | An open-source effort to extend MTEB to cover a broad set of languages |  
+| 🌐 [MMTEB] | An open-source effort to extend MTEB to cover a broad set of languages |
 
 [Tasks]: docs/tasks.md
 [Benchmarks]: docs/benchmarks.md

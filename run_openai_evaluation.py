@@ -36,8 +36,7 @@ class OpenAIEvaluator:
 def main():
     
     # Initialize MTEB with specific tasks
-    #mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
-    mteb_tr = mteb.get_tasks(tasks=["TQuadRetrieval"])
+    mteb_tr = mteb.get_benchmark("MTEB(Turkish)")
     evaluation = MTEB(tasks=mteb_tr)
 
     # Initialize OpenAI model

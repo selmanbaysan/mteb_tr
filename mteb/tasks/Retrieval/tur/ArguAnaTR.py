@@ -13,7 +13,7 @@ class ArguAnaTR(AbsTaskRetrieval):
         description="Turkish machine translated version of the ArguAna.",
         reference="http://argumentation.bplaced.net/arguana/data",
         dataset={
-            "path": "selmanbaysan/arguana-tr",
+            "path": "trmteb/arguana-tr",
             "revision": "main",
         },
         type="Retrieval",

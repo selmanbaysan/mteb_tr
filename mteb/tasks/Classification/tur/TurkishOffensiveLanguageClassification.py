@@ -12,7 +12,7 @@ class TurkishOffensiveLanguageClassification(AbsTaskClassification):
                     "speech with offensive or non-offensive labels",
         reference="https://sites.google.com/site/offensevalsharedtask/offenseval-2020",
         dataset={
-            "path": "selmanbaysan/offenseval",
+            "path": "trmteb/offenseval",
             "revision": "main",
         },
         type="Classification",
