@@ -89,10 +89,10 @@ def load_leaderboard(
         os.makedirs(save_path, exist_ok=True)  # Ensure directory exists
 
         summary_file = os.path.join(
-            save_path, f"{benchmark_name.replace(' ', '_')}_summary_without_bitext_mining.csv"
+            save_path, f"{benchmark_name.replace(' ', '_')}_summary.csv"
         )
         per_task_file = os.path.join(
-            save_path, f"{benchmark_name.replace(' ', '_')}_per_task_without_bitext_mining.csv"
+            save_path, f"{benchmark_name.replace(' ', '_')}_per.csv"
         )
 
         summary_df.to_csv(summary_file, index=False)
@@ -128,7 +128,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--results_repo",
         type=str,
-        default="https://github.com/ANONYMUS_USER/mteb_tr_results", # An
+        default="https://github.com/selmanbaysan/mteb_tr_results", # An
         help="Path to results repository. Default is the official MTEB results repo.",
     )
 
