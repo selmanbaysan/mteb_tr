@@ -5,7 +5,7 @@ Rank (Borda),Model,Zero-shot,Number of Parameters,Embedding Dimensions,Max Token
 4,turkish_embedding_model_fine_tuned,⚠️,Unknown,Unknown,Unknown,63.42,70.25,86.88,70.93,61.49,71.03,52.75,78.44
 5,text-embedding-3-small,⚠️,Unknown,Unknown,Unknown,66.61,69.52,91.55,69.51,62.08,58.13,64.99,70.85
 6,[multilingual-e5-base](https://huggingface.co/intfloat/multilingual-e5-base),✅,278M,768,514,64.26,70.97,98.51,68.2,60.25,62.2,58.29,78.37
-7,no_model_name_available,⚠️,Unknown,Unknown,Unknown,59.84,59.49,37.7,70.68,63.45,57.65,52.54,74.93
+7,turkish_embedding_model,⚠️,Unknown,Unknown,Unknown,59.84,59.49,37.7,70.68,63.45,57.65,52.54,74.93
 8,[paraphrase-multilingual-mpnet-base-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-mpnet-base-v2),✅,278M,768,512,61.71,71.05,96.06,69.06,57.52,72.22,49.27,82.18
 9,[multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small),✅,118M,384,512,62.53,69.55,97.46,65.64,59.14,62.34,56.53,76.18
 10,[paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2),✅,118M,768,512,58.94,68.44,93.67,65.76,56.64,69.56,46.57,78.41
